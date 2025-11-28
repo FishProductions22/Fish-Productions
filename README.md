@@ -6,39 +6,50 @@ index.html
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Gen-4 Season 4 — Final Points Standings</title>
   <style>
-    :root{--bg:#0f1720;--card:#0b1220;--muted:#9aa4b2;--accent:#ffcc00;--accent2:#4fc3f7}
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:#e6eef6;background:linear-gradient(180deg,#071021 0%, #071623 100%);}
-    .wrap{max-width:1100px;margin:36px auto;padding:24px}
-    header{display:flex;align-items:center;gap:16px}
-    .logo{width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700}
-    h1{margin:0;font-size:1.6rem}
-    p.lead{margin:8px 0 18px;color:var(--muted)}
-
-    .controls{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px}
-    .search{flex:1;min-width:220px}
-    input[type="search"], select{width:100%;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit}
-    button{background:var(--accent);border:none;color:#071021;padding:10px 14px;border-radius:8px;cursor:pointer}
-
-    .card{background:rgba(255,255,255,0.03);border-radius:10px;padding:12px;overflow:auto;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
-    table{width:100%;border-collapse:collapse;font-size:0.95rem}
-    thead th{position:sticky;top:0;background:linear-gradient(180deg,rgba(0,0,0,0.3),rgba(0,0,0,0.2));backdrop-filter:blur(4px);z-index:2;padding:10px;text-align:left;font-weight:600;color:var(--muted)}
-    tbody td{padding:10px;border-top:1px solid rgba(255,255,255,0.03)}
-    tbody tr:hover{background:linear-gradient(90deg,rgba(79,195,247,0.03),transparent)}
-    .num{font-variant-numeric:tabular-nums;color:#dbe9ff}
-
-    /* highlight top 3 */
-    tbody tr[data-pos="1"]{background:linear-gradient(90deg,rgba(255,204,0,0.06),transparent)}
-    tbody tr[data-pos="2"]{background:linear-gradient(90deg,rgba(192,192,192,0.04),transparent)}
-    tbody tr[data-pos="3"]{background:linear-gradient(90deg,rgba(205,127,50,0.03),transparent)}
-
-    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px;color:var(--muted);font-size:0.9rem}
-
-    .small{font-size:0.85rem;color:var(--muted)}
-
-    @media (max-width:720px){
-      thead th:nth-child(6), tbody td:nth-child(6), thead th:nth-child(7), tbody td:nth-child(7){display:none}
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background: #0b1622;
+        color: #ffffff;
     }
-  </style>
+    .container {
+        width: 95%;
+        max-width: 1200px;
+        margin: 40px auto;
+        background: #0f1c2e;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+    th {
+        background: #1d2d44;
+        padding: 12px;
+        text-align: left;
+        font-weight: bold;
+        color: #d3d6da;
+    }
+    tr {
+        background: #132238; /* <<< unified navy row background */
+    }
+    td {
+        padding: 12px;
+        border-bottom: 1px solid #1f2f47;
+        color: #e8ecf2;
+    }
+    tr:nth-child(even) {
+        background: #0f1c2e; /* slightly darker navy for alternating */
+    }
+    h1 {
+        text-align: center;
+        color: #ffffff;
+    }
+</style>
 </head>
 <body>
   <div class="wrap">
@@ -84,7 +95,31 @@ index.html
           </tr>
         </thead>
         <tbody>
-          <!-- Data rows inserted by script -->
+          <tr>
+            <td>1</td>
+            <td class="driver">
+              <img src="images/terry-labonte.jpg" alt="Terry Labonte">
+              Terry Labonte
+            </td>
+            <td>501</td><td>-</td><td>1</td><td>10</td><td>14</td><td>20</td><td>0</td>
+          </tr>
+          <tr class="alt">
+            <td>2</td>
+            <td class="driver">
+              <img src="images/jeff-gordon.jpg" alt="Jeff Gordon">
+              Jeff Gordon
+            </td>
+            <td>500</td><td>-1</td><td>4</td><td>10</td><td>13</td><td>20</td><td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td class="driver">
+              <img src="images/dale-jarrett.jpg" alt="Dale Jarrett">
+              Dale Jarrett
+            </td>
+            <td>456</td><td>-45</td><td>2</td><td>5</td><td>12</td><td>20</td><td>3</td>
+          </tr>
+          <!-- Continue pattern for all remaining drivers -->
         </tbody>
       </table>
     </div>
